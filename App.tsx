@@ -103,21 +103,21 @@ const App: React.FC = () => {
           {/* Action Trigger - Large Protected Switch Look */}
           <div className="relative">
             <div className={`
-              h-16 sm:h-28 rounded-lg flex items-center justify-center px-4 transition-all duration-700
-              border-4 border-black shadow-[inset_0_4px_10px_rgba(0,0,0,0.8)]
+              w-full mx-2 sm:mx-0 h-20 sm:h-36 rounded-lg flex items-center justify-center px-6 sm:px-8 transition-all duration-700
+              border-4 border-black shadow-[inset_0_6px_12px_rgba(0,0,0,0.9)]
               ${allReady 
-                ? 'bg-red-800/80' 
+                ? 'bg-red-800/90' 
                 : 'bg-[#151515] opacity-50'}
             `}>
               <div className="flex flex-col items-center">
                 <span className={`
-                  text-2xl sm:text-4xl font-black tracking-[0.12em] sm:tracking-[0.4em] italic transition-all duration-700 text-center
-                  ${allReady ? 'text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]' : 'text-zinc-800'}
+                  text-3xl sm:text-5xl font-black tracking-[0.12em] sm:tracking-[0.4em] italic transition-all duration-700 text-center
+                  ${allReady ? 'text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]' : 'text-zinc-800'}
                 `}>
                   ACTION
-                </span> 
+                </span>
                 {allReady && (
-                  <span className="text-[10px] font-bold text-red-400 tracking-[1em] mt-2 animate-pulse uppercase">Authorized</span>
+                  <span className="text-sm sm:text-[10px] font-bold text-red-400 tracking-[0.6em] mt-3 sm:mt-2 animate-pulse uppercase">Authorized</span>
                 )}
               </div>
 
