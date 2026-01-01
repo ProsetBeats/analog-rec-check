@@ -65,7 +65,7 @@ const App: React.FC = () => {
             </div>
 
             {/* Analog VU Meter */}
-            <div className="relative sm:w-44 sm:h-24 w-full h-20 max-w-[160px] mx-auto sm:mx-0 bg-[#e8e4d8] rounded-md border-4 border-zinc-900 shadow-[inset_0_4px_12px_rgba(0,0,0,0.3)] overflow-hidden">
+            <div className="relative sm:w-48 sm:h-28 w-full h-24 max-w-[200px] mx-auto sm:mx-0 bg-[#e8e4d8] rounded-md border-4 border-zinc-900 shadow-[inset_0_4px_12px_rgba(0,0,0,0.3)] overflow-hidden">
               {/* Scale */}
               <div className="absolute inset-0 p-2 opacity-60">
                 <div className="flex justify-between items-end h-full px-2 border-b border-black/20">
@@ -81,7 +81,7 @@ const App: React.FC = () => {
               
               {/* Needle */}
               <div 
-                className="absolute bottom-[-12px] left-1/2 w-0.5 h-20 sm:h-24 bg-red-600 origin-bottom transition-transform duration-1000 ease-out z-20"
+                className="absolute bottom-[-14px] left-1/2 w-0.5 h-24 sm:h-28 bg-red-600 origin-bottom transition-transform duration-1000 ease-out z-20"
                 style={{ transform: `translateX(-50%) rotate(${(checkedCount / 4) * 120 - 60}deg)` }}
               />
               {/* Needle Cap */}
@@ -93,7 +93,7 @@ const App: React.FC = () => {
           </div>
 
           {/* Control Cluster */}
-          <div className="grid grid-cols-2 gap-x-6 gap-y-6 mb-8">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-4 mb-6">
             <VintageButton label="CAMERA" isActive={checklist.CAMERA} onToggle={() => toggleItem('CAMERA')} />
             <VintageButton label="SCREEN" isActive={checklist.SCREEN} onToggle={() => toggleItem('SCREEN')} />
             <VintageButton label="AUDIO" isActive={checklist.AUDIO} onToggle={() => toggleItem('AUDIO')} />
@@ -103,10 +103,10 @@ const App: React.FC = () => {
           {/* Action Trigger - Large Protected Switch Look */}
           <div className="relative">
             <div className={`
-              w-full mx-2 sm:mx-0 h-20 sm:h-36 rounded-lg flex items-center justify-center px-6 sm:px-8 transition-all duration-700
-              border-4 border-black shadow-[inset_0_6px_12px_rgba(0,0,0,0.9)]
+              w-full mx-0 h-28 sm:h-44 rounded-lg flex items-center justify-center px-8 sm:px-10 transition-all duration-700
+              border-4 border-black shadow-[inset_0_8px_16px_rgba(0,0,0,0.95)]
               ${allReady 
-                ? 'bg-red-800/90' 
+                ? 'bg-red-800/95' 
                 : 'bg-[#151515] opacity-50'}
             `}>
               <div className="flex flex-col items-center">
