@@ -35,7 +35,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-8 bg-[#050505]">
+    <div className="min-h-screen flex items-start sm:items-center justify-center p-6 sm:p-8 bg-[#050505]">
       {/* Industrial Rack Unit */}
       <div className="relative w-full max-w-2xl">
         
@@ -50,13 +50,13 @@ const App: React.FC = () => {
         </div>
 
         {/* Main Chassis Panel */}
-        <div className="relative bg-[#222222] p-12 rounded-sm shadow-[0_60px_100px_rgba(0,0,0,0.9),inset_0_1px_1px_rgba(255,255,255,0.1)] border-b-8 border-black overflow-hidden">
+        <div className="relative bg-[#222222] p-6 sm:p-12 rounded-sm shadow-[0_60px_100px_rgba(0,0,0,0.9),inset_0_1px_1px_rgba(255,255,255,0.1)] border-b-8 border-black overflow-hidden">
           
           {/* Surface texture (Pitted metal) */}
           <div className="absolute inset-0 opacity-[0.15] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/dark-leather.png')]" />
 
           {/* Header & VU Meter Section */}
-          <div className="relative flex justify-between items-center mb-16 border-b border-black/40 pb-10">
+          <div className="relative flex flex-col sm:flex-row justify-between items-start sm:items-center mb-16 border-b border-black/40 pb-10 gap-6 sm:gap-0">
             <div className="space-y-2">
               <h1 className="text-4xl font-black text-zinc-300 italic tracking-tighter drop-shadow-lg">
                 STUDIO<span className="text-orange-600">CHECK</span> <span className="text-xs not-italic font-mono text-zinc-600 ml-2">v4.0</span>
@@ -65,7 +65,7 @@ const App: React.FC = () => {
             </div>
 
             {/* Analog VU Meter */}
-            <div className="relative w-40 h-24 bg-[#e8e4d8] rounded-md border-4 border-zinc-900 shadow-[inset_0_4px_12px_rgba(0,0,0,0.3)] overflow-hidden">
+            <div className="relative sm:w-40 sm:h-24 w-full h-28 max-w-[180px] mx-auto sm:mx-0 bg-[#e8e4d8] rounded-md border-4 border-zinc-900 shadow-[inset_0_4px_12px_rgba(0,0,0,0.3)] overflow-hidden">
               {/* Scale */}
               <div className="absolute inset-0 p-2 opacity-60">
                 <div className="flex justify-between items-end h-full px-2 border-b border-black/20">
@@ -93,7 +93,7 @@ const App: React.FC = () => {
           </div>
 
           {/* Control Cluster */}
-          <div className="grid grid-cols-2 gap-x-12 gap-y-16 mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16 mb-20">
             <VintageButton label="CAMERA" isActive={checklist.CAMERA} onToggle={() => toggleItem('CAMERA')} />
             <VintageButton label="SCREEN" isActive={checklist.SCREEN} onToggle={() => toggleItem('SCREEN')} />
             <VintageButton label="AUDIO" isActive={checklist.AUDIO} onToggle={() => toggleItem('AUDIO')} />
@@ -103,7 +103,7 @@ const App: React.FC = () => {
           {/* Action Trigger - Large Protected Switch Look */}
           <div className="relative">
             <div className={`
-              h-32 rounded-lg flex items-center justify-center transition-all duration-700
+              h-24 sm:h-32 rounded-lg flex items-center justify-center px-4 transition-all duration-700
               border-4 border-black shadow-[inset_0_4px_10px_rgba(0,0,0,0.8)]
               ${allReady 
                 ? 'bg-red-800/80' 
@@ -111,7 +111,7 @@ const App: React.FC = () => {
             `}>
               <div className="flex flex-col items-center">
                 <span className={`
-                  text-5xl font-black tracking-[0.5em] italic transition-all duration-700
+                  text-3xl sm:text-5xl font-black tracking-[0.25em] sm:tracking-[0.5em] italic transition-all duration-700 text-center
                   ${allReady ? 'text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]' : 'text-zinc-800'}
                 `}>
                   ACTION
@@ -136,7 +136,7 @@ const App: React.FC = () => {
           </div>
 
           {/* Footer Branding */}
-          <div className="mt-14 flex justify-between items-end border-t border-white/5 pt-8">
+          <div className="mt-14 flex flex-col sm:flex-row justify-between items-end border-t border-white/5 pt-8 gap-4 sm:gap-0">
             <div className="flex space-x-4 opacity-40 grayscale">
               <div className="flex flex-col">
                 <span className="text-[10px] font-bold text-zinc-400 leading-none">PEAK</span>
