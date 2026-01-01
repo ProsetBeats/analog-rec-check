@@ -21,7 +21,7 @@ const VintageButton: React.FC<VintageButtonProps> = ({ label, isActive, onToggle
         <button 
           onClick={handleClick}
           className={`
-            relative w-24 h-24 rounded-lg transition-all duration-100 ease-out outline-none
+            relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg transition-all duration-100 ease-out outline-none
             flex flex-col items-center justify-center select-none active:scale-95
             ${isActive 
               ? 'bg-[#cc5500] translate-y-1 shadow-[inset_0_2px_10px_rgba(0,0,0,0.5),_0_0_20px_rgba(234,88,12,0.4)] border-b-0' 
@@ -33,7 +33,7 @@ const VintageButton: React.FC<VintageButtonProps> = ({ label, isActive, onToggle
           
           {/* Backlit Text */}
           <span className={`
-            text-[11px] font-black tracking-widest transition-all duration-300 uppercase z-10
+            text-[9px] sm:text-[11px] font-black tracking-widest transition-all duration-300 uppercase z-10
             ${isActive 
               ? 'text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.9)]' 
               : 'text-zinc-600 drop-shadow-[0_-1px_0_rgba(0,0,0,0.8)]'}
@@ -43,7 +43,7 @@ const VintageButton: React.FC<VintageButtonProps> = ({ label, isActive, onToggle
 
           {/* Indicator Light Strip */}
           <div className={`
-            mt-3 w-10 h-1 rounded-full transition-all duration-500
+            mt-2 sm:mt-3 w-10 h-1 rounded-full transition-all duration-500
             ${isActive 
               ? 'bg-red-500 shadow-[0_0_12px_#ef4444,_0_0_2px_#fff]' 
               : 'bg-black/60 shadow-inner'}
@@ -57,7 +57,7 @@ const VintageButton: React.FC<VintageButtonProps> = ({ label, isActive, onToggle
       </div>
       
       {/* Technical Sub-label */}
-      <span className="mt-3 text-[7px] text-zinc-500 font-mono tracking-[0.3em] uppercase opacity-50">
+      <span className="mt-2 sm:mt-3 text-[7px] text-zinc-500 font-mono tracking-[0.3em] uppercase opacity-50">
         Status chk // {label.slice(0, 3)}
       </span>
     </div>
