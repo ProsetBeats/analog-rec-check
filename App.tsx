@@ -65,7 +65,7 @@ const App: React.FC = () => {
             </div>
 
             {/* Analog VU Meter */}
-            <div className="relative sm:w-36 sm:h-20 w-full h-16 max-w-[120px] mx-auto sm:mx-0 bg-[#e8e4d8] rounded-md border-4 border-zinc-900 shadow-[inset_0_4px_12px_rgba(0,0,0,0.3)] overflow-hidden">
+            <div className="relative sm:w-44 sm:h-24 w-full h-20 max-w-[160px] mx-auto sm:mx-0 bg-[#e8e4d8] rounded-md border-4 border-zinc-900 shadow-[inset_0_4px_12px_rgba(0,0,0,0.3)] overflow-hidden">
               {/* Scale */}
               <div className="absolute inset-0 p-2 opacity-60">
                 <div className="flex justify-between items-end h-full px-2 border-b border-black/20">
@@ -81,7 +81,7 @@ const App: React.FC = () => {
               
               {/* Needle */}
               <div 
-                className="absolute bottom-[-10px] left-1/2 w-0.5 h-16 sm:h-20 bg-red-600 origin-bottom transition-transform duration-1000 ease-out z-20"
+                className="absolute bottom-[-12px] left-1/2 w-0.5 h-20 sm:h-24 bg-red-600 origin-bottom transition-transform duration-1000 ease-out z-20"
                 style={{ transform: `translateX(-50%) rotate(${(checkedCount / 4) * 120 - 60}deg)` }}
               />
               {/* Needle Cap */}
@@ -103,7 +103,7 @@ const App: React.FC = () => {
           {/* Action Trigger - Large Protected Switch Look */}
           <div className="relative">
             <div className={`
-              h-12 sm:h-28 rounded-lg flex items-center justify-center px-2 sm:px-4 transition-all duration-700
+              h-16 sm:h-28 rounded-lg flex items-center justify-center px-4 transition-all duration-700
               border-4 border-black shadow-[inset_0_4px_10px_rgba(0,0,0,0.8)]
               ${allReady 
                 ? 'bg-red-800/80' 
@@ -111,7 +111,7 @@ const App: React.FC = () => {
             `}>
               <div className="flex flex-col items-center">
                 <span className={`
-                  text-xl sm:text-4xl font-black tracking-[0.12em] sm:tracking-[0.4em] italic transition-all duration-700 text-center
+                  text-2xl sm:text-4xl font-black tracking-[0.12em] sm:tracking-[0.4em] italic transition-all duration-700 text-center
                   ${allReady ? 'text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]' : 'text-zinc-800'}
                 `}>
                   ACTION
