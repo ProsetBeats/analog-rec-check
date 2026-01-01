@@ -1,0 +1,19 @@
+
+{
+  "name": "Analog Rec Check",
+  "short_name": "AnalogRec",
+  "description": "A vintage-inspired manual pre-recording checklist.",
+  "start_url": "./",,
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#cc5500",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='100' fill='%23222'/%3E%3Ccircle cx='256' cy='256' r='120' fill='%23cc5500'/%3E%3Ccircle cx='256' cy='256' r='40' fill='%23fff' fill-opacity='0.2'/%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
