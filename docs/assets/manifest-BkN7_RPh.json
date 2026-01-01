@@ -3,7 +3,7 @@
   "name": "Analog Rec Check",
   "short_name": "AnalogRec",
   "description": "A vintage-inspired manual pre-recording checklist.",
-  "start_url": "./",,
+  "start_url": "/analog-rec-check/",
   "display": "standalone",
   "background_color": "#050505",
   "theme_color": "#cc5500",
